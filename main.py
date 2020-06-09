@@ -15,12 +15,6 @@ def send_calendar(message):
     month = now.month
     month_name = now.strftime("%B")
     keyboard = create_calendar(year, month, month_name)
-    # --------------------
-    # month_name = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
-    #               'November', 'December']
-    # for day in ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"]:
-    #    keyboard.row(types.InlineKeyboardButton(day, callback_data='ignore'))
-
     bot.send_message(message.chat.id, 'Оберіть дату:', reply_markup=keyboard)
 
 
